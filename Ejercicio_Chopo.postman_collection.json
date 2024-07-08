@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "f53b8a91-dec7-44b9-b706-d119e0e41731",
+		"name": "Ejercicio_Chopo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AgregarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\" : \"PROD000002\",\r\n    \"nombre\" : \"Producto\",\r\n    \"categoria\" : \"SALUD\",\r\n    \"precio\" : 101.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/ejercicio/chopo/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"ejercicio",
+						"chopo",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\" : \"PROD000002\",\r\n    \"nombre\" : \"Producto nuevo Cuatro\",\r\n    \"categoria\" : \"SALUD\",\r\n    \"precio\" : 101.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/ejercicio/chopo/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"ejercicio",
+						"chopo",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarProducto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ID_CLIENT_SESSION",
+						"value": "78965088",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoria\" : \"SALUD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/ejercicio/chopo/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"ejercicio",
+						"chopo",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
